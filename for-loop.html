@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>For Loops</title>
+
+    <script type="text/javascript">
+        function rainbowTitle(t){
+            var colors = ["red", "blue", "green", "yellow", "brown", "purple"];
+
+            document.write('<h1>');
+            for (var i = 0; i < t.length; i++) {
+                var fancyLetter = '<span style="color: '
+                    + colors[i % colors.length]
+                    + ';">'
+                    + t[i]
+                    + '</span>';
+                document.write(fancyLetter);
+            }
+            document.write('</h1>');
+        }
+    </script>
+</head>
+
+<body onload="rainbowTitle('Trivial Pursuit');">
+</body>
+
+</html>
